@@ -53,3 +53,22 @@ Recordar que al final se debe exportar el componente de la siguiente manera:
 `export default Componente;`
 
 ## 05. Propiedades
+
+Son valores que recibe un componente hijo de uno padre. Se agrupan en un objeto llamado **props**, el cual puede recibir diferentes tipos de datos como:
+- Strings
+- Numbers
+- Booleans
+- Arrays
+- Objects
+- Functions
+- React Elements
+- React Components
+Las props son **inmutables**, es decir que son valroes de solo lectura.
+Si se define al componente en una **clase**, las props se reciben en el constructor de la clase mientras que sl el comoponente se define como una **funcion**, las props se reciben como un parametro de la función.
+
+**defaultProps**: Se utiliza para marcar propiedades por defecto en un componente.
+
+### Prop Types
+Se puede instalar como **dependencia** dentro de un proyecto JS. Mediante un atributo `Propiedades.propTypes` me permite documentar el tipo de identidad de cada propiedad pasada a un componente. React va a chequear las propiedades pasadas a un componente y alertar si no coinciden con lo solicitado. De forma similar, tambien permite marcar una propiedad como obligatoria con `isRequired` [prop-types en NPM](https://www.npmjs.com/package/prop-types)
+
+## 06. Estado
