@@ -1,7 +1,8 @@
 # react-partners
 
-curso jonmircha sobre react
-https://www.youtube.com/playlist?list=PLvq-jIkSeTUZ5XcUw8fJPTBKEHEKPMTKk
+[Notas del curso](https://jonmircha.com/react)
+
+[Curso en Youtube](https://www.youtube.com/playlist?list=PLvq-jIkSeTUZ5XcUw8fJPTBKEHEKPMTKk)
 
 ## 02. Create React App 
 
@@ -72,3 +73,17 @@ Si se define al componente en una **clase**, las props se reciben en el construc
 Se puede instalar como **dependencia** dentro de un proyecto JS. Mediante un atributo `Propiedades.propTypes` me permite documentar el tipo de identidad de cada propiedad pasada a un componente. React va a chequear las propiedades pasadas a un componente y alertar si no coinciden con lo solicitado. De forma similar, tambien permite marcar una propiedad como obligatoria con `isRequired` [prop-types en NPM](https://www.npmjs.com/package/prop-types)
 
 ## 06. Estado
+El **state** son los valores internos que manejan la logica y los datos de un componente, permite que éste reaccione a culaquier cambio lo que hará que se vuelva a renderizar en la interfaz. Tiene 3 caracteristicas:
+- Es inmutable.
+- No se puede modificar directamente
+- Es asincrono.
+
+Para hacer cambios hay que hacer uso del método **setState()**
+La propagación del estado fluye de forma **unidireccional y descendiente** (hacia abajo), esto significa que un componente padre puede pasar valores de su estado a componentes hijos que lo recibirán como propiedades.
+En el momento que los valores del estado del padre sufran cambios esto causará que tanto el padre como los hijos que recibieron esos valores como propiedades se rendericen nuevamente y reaccionen a dicho cambio.
+
+Cada componente que se defina como una clase cuenta con un objeto para almacenar información llamado **state**.
+
+Cada vez que cambia el state React vuelve a renderizar (pintar) el componente en la vista.
+
+## 07. Renderizado Condicional
