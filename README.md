@@ -6,14 +6,14 @@
 
 ## 02. Create React App 
 
-###Temas
+### Temas
 `npx create-react-app`
 `npm start`
 `npm run build`
 `npm run test`
 `npm run eject`
 
-###Instalar:
+### Instalar:
 - **React Dev Tools Chrome**: Es una extensión para Chrome que agrega de herramientas de depuración para React.
 - **Simple React Snippets for VSCode**: Es una extensión para Visual Studio Code que nos permite usar atajos para agilizar la escritura de código React.
 
@@ -87,3 +87,9 @@ Cada componente que se defina como una clase cuenta con un objeto para almacenar
 Cada vez que cambia el state React vuelve a renderizar (pintar) el componente en la vista.
 
 ## 07. Renderizado Condicional
+En React, puedes crear distintos componentes que encapsulan el comportamiento que necesitas. Entonces, puedes renderizar solamente algunos de ellos, dependiendo del estado de tu aplicación.
+
+El renderizado condicional en React funciona de la misma forma que lo hacen las condiciones en JavaScript. Puedes usar el condicional **if o el operador ternario** para crear elementos dinámicamente en base al valor del estado o las propiedades que recibe el componente.
+`{ this.state.session ? <IsLoggedIn /> : <NotLoggedIn /> }`
+
+## 08. Renderizado de Elementos
