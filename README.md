@@ -93,3 +93,18 @@ El renderizado condicional en React funciona de la misma forma que lo hacen las 
 `{ this.state.session ? <IsLoggedIn /> : <NotLoggedIn /> }`
 
 ## 08. Renderizado de Elementos
+Puedes hacer colecciones de elementos e incluirlos en JSX usando llaves {}.
+
+Recorriendo los elementos de un **array** y usando la función **map()** de Javascript.
+
+Al ejecutar un map de un array que pase por un componente, serás advertido que una **key** debería ser proporcionada para elementos de lista.
+
+Una “key” es un atributo especial de tipo string que debes incluir al crear listas de elementos.
+
+Las keys ayudan a React a identificar que elementos han cambiado, son agregados, o son eliminados. Las keys deben ser dadas a los elementos dentro del array para darle una **identidad estable**.
+
+La mejor forma de elegir una key es usando un string que identifique únicamente a un elemento de la lista entre sus hermanos. Habitualmente vas a usar los IDs de tus datos como key.
+
+Cuando no tengas IDs estables para renderizar, puedes usar como key el índice de los elementos del array de datos como último recurso.
+
+Las keys usadas dentro de arrays deberían ser únicas entre sus hermanos. Sin embargo, no necesitan ser únicas globalmente. Podemos usar las mismas keys cuando creamos dos o más arrays diferentes.
