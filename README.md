@@ -108,3 +108,17 @@ La mejor forma de elegir una key es usando un string que identifique únicamente
 Cuando no tengas IDs estables para renderizar, puedes usar como key el índice de los elementos del array de datos como último recurso.
 
 Las keys usadas dentro de arrays deberían ser únicas entre sus hermanos. Sin embargo, no necesitan ser únicas globalmente. Podemos usar las mismas keys cuando creamos dos o más arrays diferentes.
+
+## 09. Eventos
+Manejar eventos en React es muy similar a manejar eventos en el DOM. Sin embargo existen algunas diferencias de sintaxis:
+- Los eventos de React se nombran usando camelCase, en vez de minúsculas.
+- Con JSX pasas una función como el manejador del evento, en vez de un string.
+Ejemplo en HTML:
+`<button onclick="cambiarIdioma()">Cambiar idioma</button>`
+Ejemplo en React:
+`<button onClick={cambiarIdioma}>Cambiar idioma</button>`
+Otra diferencia es que en React no puedes retornar **false** para prevenir el comportamiento por defecto. Debes, explícitamente, llamar **preventDefault**.
+### Binding
+Cada vez que se defina un evento en un componente basado en clases es necesario hacer un binding (es recomendable **hacerlo en el constructor**) para poder **asignar el evento** al contexto. Al usar los componentes basados en función esto es reemplazado por los hooks.
+
+## 10. Eventos y Property Initializers
