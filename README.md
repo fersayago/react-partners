@@ -7,11 +7,11 @@
 ## 02. Create React App 
 
 ### Temas
-`npx create-react-app`
-`npm start`
-`npm run build`
-`npm run test`
-`npm run eject`
+- `npx create-react-app`
+- `npm start`
+- `npm run build`
+- `npm run test`
+- `npm run eject`
 
 ### Instalar:
 - **React Dev Tools Chrome**: Es una extensión para Chrome que agrega de herramientas de depuración para React.
@@ -122,3 +122,8 @@ Otra diferencia es que en React no puedes retornar **false** para prevenir el co
 Cada vez que se defina un evento en un componente basado en clases es necesario hacer un binding (es recomendable **hacerlo en el constructor**) para poder **asignar el evento** al contexto. Al usar los componentes basados en función esto es reemplazado por los hooks.
 
 ## 10. Eventos y Property Initializers
+Creamos un componente de clases nuevo llamado EventosES7.js para usar property initializers. No es necesario definir el constructor ya que directamente se va a definir la propiedad **state**. Para evitar el bind, los eventos dentro de la clase se van a definir con arrow functions ya que estas funciones heredan el this del contexto en el que se encuentran.
+`sumar = (e) => { this.setState ({}) }`
+
+## 11. Eventos Nativos, Sintéticos y Personalizados
+
