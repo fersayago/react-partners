@@ -126,4 +126,21 @@ Creamos un componente de clases nuevo llamado EventosES7.js para usar property i
 `sumar = (e) => { this.setState ({}) }`
 
 ## 11. Eventos Nativos, Sintéticos y Personalizados
+Creamos el nuevo componente que vamos a usar `MasSobreEventos.js` y dentro del mismo un boton que llama al metodo `handleClick()` que es el manejador de eventos que se va asociar.
+**Toda funciona manejadora de evento solo puede recibir el evento en si**
+Para asignar el evento al boton se utiliza `onClick={this.handleClick}` (no usar parentesis al final de la funcion ya que esto significa ejecución inmediata)
+Al ver las propiedades del evento nos aparece que esto es un **SyntheticBaseEvent**
+### SyntheticBaseEvent
+React envuelve el evento nativo del navegador y le da soporte a los diferentes navegadores y versiones donde react se soporta. Para indagar en este temas podemos recurrir a la [documentacion oficial de React sobre eventos](https://es.reactjs.org/docs/events.html)
 
+React -> SyntheticEvent
+JS Vainilla -> nativeEvent
+
+Agregamos la variable mensaje al manejador de eventos y le pasamos el parametro desde el boton. Para hacer esto tenemos que crear un funcion con evento que se ejecute al tocar el boton, y que invoque a la funcion handleClick() pasandole los argumentos evento y el mensaje a mostrar de la siguiente manera:
+`<button onClick={(e) => this.handleClick(e, "Pasando parametro desde un evento")}>`
+### Eventos Personalizados
+Si en lugar de tener un boton tenemos un componente propio que ya es un botón, no podemos pasar el elemento onClick() al componente ya que no es una etiqueta JSX y no funciona como tal. Si quiero que funcione el evento JSX en un componente personalizado se tiene que pasar el evento como una propiedad al componente para que este pueda usarlo en el click del boton con JSX:
+`<Boton myOnClick={(e) => this.handleClick(e, "Pasando parametro desde un evento")}/>`
+Una vez dentro del componente, usamos las props para tomar el elemento que pasamos en su creacion mediante `= (props.propiedadRecibida) => {}` o, en caso de que sea necesario, destructurando el objeto desde las props.
+
+## 12. Comunicación entre Componentes
