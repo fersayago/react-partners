@@ -144,3 +144,19 @@ Si en lugar de tener un boton tenemos un componente propio que ya es un botón, 
 Una vez dentro del componente, usamos las props para tomar el elemento que pasamos en su creacion mediante `= (props.propiedadRecibida) => {}` o, en caso de que sea necesario, destructurando el objeto desde las props.
 
 ## 12. Comunicación entre Componentes
+Son metodos que se ejecutan automaticamente en un **Componente de Clase** y ocurren en 3 fases:
+### Montaje
+Estos métodos se ejecutan cuando se crea un componente y se inserta en el arbol del DOM.
+
+- **constructor()**: Se ejecuta al crear la instancia del componente, en el constructor puedes inicializar el estado y enlazar manejadores de eventos.
+- **render()**: Es el único método requerido, cuando se ejecuta, examina el estado y las propiedades y dibuja el componente en el árbol del DOM.
+- **componentDidMount()**: Se invoca inmediatamente después de que un componente se ha insertado al árbol del DOM. Es útil para ejecutar suscripciones o peticiones asíncronas a API's, bases de datos, servicios, etc.
+
+### Actualización
+Estos métodos son ejecutados por cambios en el estado o las propiedades de los componentes
+- **render()**: redibuja el componente cuando detecta cambios en el estado o las propiedades del componente.
+- **componentDidUpdate()**: Se ejectura inmediatamente despues de que la actualización del estado o las propiedades sucede, al igual que componentDidMount es un método ideal para hacer peticiones externas.
+
+### Desmontaje
+Estos métodos son ejecutados una vez que el componente ha sido eliminado del árbol del DOM.
+- **componentWillUnmount()**: se ejecuta antes de destruir el componente del árbol del DOM, es un método útil para hacer tareas de limpieza.
